@@ -19,3 +19,8 @@ img.stretch {
     width: 100%;
     height: auto;
 }
+.onix-logo {
+    position: absolute;
+    top: 115px;
+    left: 77px;
+}
