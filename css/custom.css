@@ -5,3 +5,17 @@
 #main {
     width: 1200px;
 }
+
+.slide h2 {
+    text-align: center;
+    margin: -20px 0 20px 0;
+}
+
+.step.big {
+    width: 1200px;
+}
+
+img.stretch {
+    width: 100%;
+    height: auto;
+}

@@ -53,47 +53,78 @@ rabbitmq</code></pre>
     </div>
 
     <div class="step slide" data-x="2000" data-y="-1500">
-        <h2>Vagrantfile</h2>
-        <q>
-
-        </q>
+        <h2>vagrant -h</h2>
+        <div class="text">
+            <img src="img/vagrant-help.png" style="width: 100%; height: auto;">
+        </div>
     </div>
 
     <div class="step slide" data-x="3000" data-y="-1500">
-        <h2><a href="https://puphpet.com/">puphpet.com</a></h2>
-        <q>
+        <h2>Vagrantfile</h2>
+        <div class="text">
 
-        </q>
+        </div>
     </div>
 
     <div class="step slide" data-x="4000" data-y="-1500">
-        <h2>Vagrant & PhpStorm</h2>
+        <h2><a href="https://puphpet.com/">puphpet.com</a></h2>
         <div class="text">
-            <img src="img/vagrantandstorm.png">
+
         </div>
     </div>
 
     <div class="step slide" data-x="5000" data-y="-1500">
-        <h2>Vagrant Digital Ocean, Amazon</h2>
-        <q>
+        <h2>MULTI-MACHINE</h2>
+        <div class="text">
+<pre><code>Vagrant.configure("2") do |config|
+    config.vm.provision "shell", inline: "echo Hello"
 
-        </q>
+    config.vm.define "web" do |web|
+        web.vm.box = "apache"
+    end
+
+    config.vm.define "db" do |db|
+        db.vm.box = "mysql"
+    end
+end</code></pre>
+        <p>В основоному корисно для моделювання взаємодії а також тестування</p>
+        </div>
     </div>
 
     <div class="step slide" data-x="6000" data-y="-1500">
+        <h2>Vagrant Digital & Ocean, Amazon ...</h2>
+        <div class="text">
+
+        </div>
+    </div>
+
+    <div class="step slide" data-x="7000" data-y="-1500">
         <h2>Оптимізація</h2>
         <div class="text">
-            nfs
+            * nfs
             <pre><code>config.vm.network :private_network, ip: '192.168.50.50'
 config.vm.synced_folder '.', '/vagrant', nfs: true</code></pre>
-
-            Use all CPU cores and 1/4 system memory
+            <br/>
+            * Use all CPU cores and 1/4 system memory
             <pre><code>config.vm.provider "virtualbox" do |v|
     cpus = 2
     mem = 1024
 end</code></pre>
+            <br/>
+            * винести за межі проекту кеш, логи, тощо
+        </div>
+    </div>
 
-            винести за межі проекту кеш, логи, тощо
+    <div class="step slide" data-x="8000" data-y="-1500">
+        <h2>Vagrant & PhpStorm</h2>
+        <div class="text">
+            <img style="display:block; margin: 40px auto;" src="img/vagrantandstorm.png">
+        </div>
+    </div>
+
+    <div class="step big" data-x="9500" data-y="-1500">
+        <div class="text">
+            <img class="stretch" src="img/vagrant-trusted.png">
         </div>
     </div>
 
