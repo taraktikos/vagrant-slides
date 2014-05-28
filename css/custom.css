@@ -24,3 +24,11 @@ img.stretch {
     top: 115px;
     left: 77px;
 }
+
+ul.with-mark {
+    list-style: circle;
+}
+
+ul.with-mark li {
+    margin-bottom: 20px;
+}
