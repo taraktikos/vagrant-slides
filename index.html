@@ -36,7 +36,7 @@
     </div>
 
     <div class="step slide" data-x="0" data-y="-1500">
-        <h2>Ідеал</h2>
+        <h2>Ідеальне налаштування середовища розробки</h2>
         <div class="text">
             <pre><code>git clone ....
 run</code></pre>
@@ -48,7 +48,8 @@ run</code></pre>
             <pre><code>git clone ....
 README
 php.ini
-rabbitmq</code></pre>
+rabbitmq
+...</code></pre>
         </div>
     </div>
 
@@ -118,7 +119,20 @@ end</code></pre>
     <div class="step slide" data-x="7000" data-y="-1500">
         <h2>Vagrant Digital & Ocean, Amazon ...</h2>
         <div class="text">
+            <pre><code>vagrant plugin install vagrant-digitalocean
+vagrant up --provider=digital_ocean</code></pre>
+            <br/>
+            <pre><code>vagrant plugin install vagrant-aws
+vagrant up --provider=aws</code></pre>
+            <br/>
+            <pre><code>config.vm.provider :digital_ocean do |provider, override|
+    override.ssh.private_key_path = '~/.ssh/id_rsa'
+    override.vm.box = 'digital_ocean'
+    override.vm.box_url = "https://github.com/..."
 
+    provider.client_id = 'YOUR CLIENT ID'
+    provider.api_key = 'YOUR API KEY'
+end</code></pre>
         </div>
     </div>
 
